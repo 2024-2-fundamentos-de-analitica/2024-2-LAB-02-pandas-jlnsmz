@@ -20,3 +20,12 @@ def pregunta_07():
     E    67
     Name: c2, dtype: int64
     """
+    
+    import pandas as pd 
+    table = pd.read_csv('files/input/tbl0.tsv', sep='\t')
+    
+    return table.groupby('c1')['c2'].sum()
+
+print(pregunta_07())
+    
+    

@@ -15,3 +15,12 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+    
+    import pandas as pd 
+    table = pd.read_csv('files/input/tbl1.tsv', sep='\t')
+    
+    result = sorted(table['c4'].str.upper().unique())
+    
+    return result
+
+#print(pregunta_06())
